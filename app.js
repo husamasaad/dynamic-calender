@@ -232,7 +232,7 @@ addEventTitle.addEventListener('input', (e) => {
   addEventTitle.value = addEventTitle.value.slice(0, 50);
 })
 
-addEventFrom.addEventListener('input', (e) => {
+addEventFrom.addEventListener('keyup', (e) => {
   addEventFrom.value = addEventFrom.value.replace(/[^0-9:]/g, "");
   if (addEventFrom.value.length === 2) {
     addEventFrom.value += ":";
@@ -240,15 +240,25 @@ addEventFrom.addEventListener('input', (e) => {
   if (addEventFrom.value.length > 4) {
     addEventFrom.value = addEventFrom.value.slice(0, 5);
   }
+  if (e.key == "Backspace") {
+    if (addEventFrom.value.length === 3) {
+      addEventFrom.value = addEventFrom.value.slice(0, 2);
+    }
+  }
 })
 
-addEventTo.addEventListener('input', (e) => {
+addEventTo.addEventListener('keyup', (e) => {
   addEventTo.value = addEventTo.value.replace(/[^0-9:]/g, "");
   if (addEventTo.value.length === 2) {
     addEventTo.value += ":";
   }
   if (addEventTo.value.length > 4) {
     addEventTo.value = addEventTo.value.slice(0, 5);
+  }
+  if (e.key == "Backspace") {
+    if (addEventFrom.value.length === 3) {
+      addEventFrom.value = addEventFrom.value.slice(0, 2);
+    }
   }
 })
 
