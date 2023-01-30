@@ -256,8 +256,8 @@ addEventTo.addEventListener('keyup', (e) => {
     addEventTo.value = addEventTo.value.slice(0, 5);
   }
   if (e.key == "Backspace") {
-    if (addEventFrom.value.length === 3) {
-      addEventFrom.value = addEventFrom.value.slice(0, 2);
+    if (addEventTo.value.length === 3) {
+      addEventTo.value = addEventTo.value.slice(0, 2);
     }
   }
 })
