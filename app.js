@@ -242,7 +242,7 @@ addEventFrom.addEventListener('keyup', (e) => {
   }
   if (e.key == "Backspace") {
     if (addEventFrom.value.length === 3) {
-      addEventFrom.value = addEventFrom.value.slice(0, 2);
+      addEventFrom.value = addEventFrom.value.slice(0, 1);
     }
   }
 })
@@ -257,7 +257,7 @@ addEventTo.addEventListener('keyup', (e) => {
   }
   if (e.key == "Backspace") {
     if (addEventTo.value.length === 3) {
-      addEventTo.value = addEventTo.value.slice(0, 2);
+      addEventTo.value = addEventTo.value.slice(0, 1);
     }
   }
 })
